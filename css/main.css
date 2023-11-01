@@ -1,0 +1,59 @@
+body {
+	font-family: Sans-Serif;
+}
+
+.gallery {
+    display: grid; /* set main container as grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* set how grid's columns will look like */
+    /* repeat(y, something) writes "something" "y" times */
+    /* grid-template-columns: repeat(4, 1fr); is same as grid-template-columns: 1fr 1fr 1fr 1fr; (this means "grid has 4 columns, each column has a size of one fraction - 25%")*/
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));  make as many columns as possible if their size is between 400px to 1fr; they will be equally wide */
+    gap: 1em; /* space between elements */
+}
+
+.gallery-item {
+    max-width: 100%; /* content must not overflow */
+    display: block;
+    margin: 0;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.gallery-item picture { /* fix image overflow on hover*/
+	overflow: hidden;
+	display: block;
+	cursor: pointer;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    display: block;
+    transition: all 0.3s; /* 0.3s long transition on hover and after hover*/
+}
+
+.gallery-item img:hover { /* hover zoom-in transition */
+	transform: scale(1.1);
+}
+
+figcaption{
+    font-size: 1.1em;
+    padding: 0.5rem;
+    background-color: #cd1755;
+    color: #ffffff;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+@media(max-width: 1000px) {
+    main {
+    	width: 100%;
+    }
+}
+
+@media(min-width: 1000px) {
+    main {
+    	width: 1000px;
+    }
+}
