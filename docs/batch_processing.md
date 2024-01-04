@@ -6,3 +6,5 @@
 - https://cloudconvert.com/webp-to-jpg
 ## Irfanview
 - https://www.irfanview.com/
+## Photoshop
+- ale není zdarma
