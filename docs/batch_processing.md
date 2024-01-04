@@ -1,0 +1,8 @@
+# Batch processing obrázků
+## GIMP
+- pro gimp existuje plugin BIMP (https://alessandrofrancesconi.it/projects/bimp/)
+## Online nástroje
+- limitované!
+- https://cloudconvert.com/webp-to-jpg
+## Irfanview
+- https://www.irfanview.com/

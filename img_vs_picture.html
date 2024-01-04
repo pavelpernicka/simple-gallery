@@ -1,0 +1,86 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Galerie</title>
+        <link rel="stylesheet" href="css/main.css">
+        <style>
+        .gallery-special{
+            display: grid; /* set main container as grid */
+            grid-template-columns: 1fr 1fr 2fr;
+        }
+        @media(max-width: 500px) {
+          .gallery-special{
+            display: grid; /* set main container as grid */
+            grid-template-columns: 1fr 1fr;
+          }
+          .fill{
+            display: none;
+          }
+        }
+        .fill{
+            background-color: black;
+            color: white;
+        }
+
+        </style>
+    </head>
+    <body>
+      <main>
+      <h1>Img vs. Picture</h1>
+        <section class="gallery-special">
+              <figure class="gallery-item"><!--figure used to group image and caption-->
+                <picture><!--tag allowing us to specify multiple image size variants-->
+                  <source media="(max-width:520px)" srcset="img/vyrez/1.webp"><!--show this image if screen size is up to 480px-->
+                  <source media="(max-width:960px)" srcset="img/960/1.webp"><!--show this image if screen size is up to 960px-->
+                  <img src="img/1920/1.webp" alt="Autíčko"><!--default image; will be loaded if none of conditions above are true => in this example if screen width > 960px-->
+                </picture>
+                <figcaption>
+                  Něco extra s Picture
+                </figcaption>
+              </figure>
+              <figure class="gallery-item"><!--figure used to group image and caption-->
+                <picture><!--tag allowing us to specify multiple image size variants-->
+                  <source media="(max-width:520px)" srcset="img/vyrez/2.webp"><!--show this image if screen size is up to 480px-->
+                  <source media="(max-width:960px)" srcset="img/960/2.webp"><!--show this image if screen size is up to 960px-->
+                  <img src="img/1920/2.webp" alt="Autíčko"><!--default image; will be loaded if none of conditions above are true => in this example if screen width > 960px-->
+                </picture>
+                <figcaption>
+                  Něco extra s Picture
+                </figcaption>
+              </figure>
+              <section class="fill">
+                <p>Fill</p>
+              </section>
+        </section>
+        
+        <section class="gallery-special">
+              <figure class="gallery-item"><!--figure used to group image and caption-->
+                <img src="img/960/1.webp"
+                  srcset="
+                    img/vyrez/1.webp 350w, 
+                    img/960/1.webp 960w, 
+                    img/1920/1.webp 1920w"
+                  width="100%" alt="Autíčko">
+                <figcaption>
+                  Něco extra s Img
+                </figcaption>
+              </figure>
+              <figure class="gallery-item"><!--figure used to group image and caption-->
+                <img src="img/960/2.webp"
+                  srcset="
+                    img/vyrez/2.webp 350w, 
+                    img/960/2.webp 960w, 
+                    img/1920/2.webp 1920w"
+                  width="100%" alt="Autíčko">
+                <figcaption>
+                  Něco extra s Img
+                </figcaption>
+              </figure>
+              <section class="fill">
+                <p>Fill</p>
+              </section>
+        </section>
+      </main>
+    </body>
+</html>
