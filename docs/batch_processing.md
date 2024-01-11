@@ -8,3 +8,6 @@
 - https://www.irfanview.com/
 ## Photoshop
 - ale není zdarma
+
+## Not a batch processing tool
+Ukázka optimalizace obrázků: https://squoosh.app/
