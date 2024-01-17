@@ -1,5 +1,5 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="cs">
     <head>
         <meta charset="utf-8">
         <title>Galerie</title>
@@ -8,168 +8,236 @@
     <body>
       <main>
       <h1>Simple gallery</h1>
-        <div class="gallery">
+        <article class="gallery">
             <figure class="gallery-item"><!--figure used to group image and caption-->
-                <picture><!--tag allowing us to specify multiple image size variants-->
-                  <source media="(max-width:480px)" srcset="img/480/1.webp"><!--show this image if screen size is up to 480px-->
-                  <source media="(max-width:960px)" srcset="img/960/1.webp"><!--show this image if screen size is up to 960px-->
-                  <img src="img/1920/1.webp" alt="Autíčko"><!--default image; will be loaded if none of conditions above are true => in this example if screen width > 960px-->
-                </picture>
+                <div class="obal"><!-- abychom ošetřli přetečení obrázku po zvětšení -->
+				<img src="img/960/1.webp"
+  				srcset="
+    			img/260/1.webp 260w,
+    			img/320/1.webp 320w,  
+    			img/380/1.webp 380w,
+    			img/480/1.webp 480w,
+    			img/540/1.webp 540w"
+				sizes="
+				  (min-width: 1000px) calc((1000px - 2*8px) * 0.33), 
+				  (min-width: 782px) calc((100vw - 2*8px) * 0.33), 
+                  (min-width: 532px) calc((100vw - 2*8px) * 0.5), 
+                  calc(100vw - 2*8px)" alt="škodovka lol">
+				</div>
                 <figcaption>
-                  Škoda Forman ve Special linu<!--just some text bellow the image-->
+                  Škoda Forman ve Special linu <!--just some text bellow the image-->
                 </figcaption>
               </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/2.webp">
-                  <source media="(max-width:960px)" srcset="img/960/2.webp">
-                  <img src="img/1920/2.webp" alt="Autíčko">
-                </picture>
+            <figure class="gallery-item"><!--figure used to group image and caption-->
+                <div class="obal"><!-- abychom ošetřli přetečení obrázku po zvětšení -->
+				<img src="img/960/2.webp"
+  				srcset="
+    			img/260/2.webp 260w,
+    			img/320/2.webp 320w,  
+    			img/380/2.webp 380w,
+    			img/480/2.webp 480w,
+    			img/540/2.webp 540w"
+				sizes="
+				  (min-width: 1000px) calc((1000px - 2*8px) * 0.33), 
+				  (min-width: 782px) calc((100vw - 2*8px) * 0.33), 
+                  (min-width: 532px) calc((100vw - 2*8px) * 0.5), 
+                  calc(100vw - 2*8px)" alt="škodovka lol">
+				</div>
                 <figcaption>
-                  Škoda Forman ve Special linu
+                  Škoda Forman ve Special linu <!--just some text bellow the image-->
                 </figcaption>
               </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/3.webp">
-                  <source media="(max-width:960px)" srcset="img/960/3.webp">
-                  <img src="img/1920/3.webp" alt="Autíčko">
-                </picture>
+            <figure class="gallery-item"><!--figure used to group image and caption-->
+                <div class="obal"><!-- abychom ošetřli přetečení obrázku po zvětšení -->
+				<img src="img/960/3.webp"
+  				srcset="
+    			img/260/3.webp 260w,
+    			img/320/3.webp 320w,  
+    			img/380/3.webp 380w,
+    			img/480/3.webp 480w,
+    			img/540/3.webp 540w"
+				sizes="
+				  (min-width: 1000px) calc((1000px - 2*8px) * 0.33), 
+				  (min-width: 782px) calc((100vw - 2*8px) * 0.33), 
+                  (min-width: 532px) calc((100vw - 2*8px) * 0.5), 
+                  calc(100vw - 2*8px)" alt="škodovka lol">
+				</div>
                 <figcaption>
-                  Škoda Forman ve Special linu
+                  Škoda Forman ve Special linu <!--just some text bellow the image-->
                 </figcaption>
               </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/4.webp">
-                  <source media="(max-width:960px)" srcset="img/960/4.webp">
-                  <img src="img/1920/4.webp" alt="Autíčko">
-                </picture>
+            <figure class="gallery-item"><!--figure used to group image and caption-->
+                <div class="obal"><!-- abychom ošetřli přetečení obrázku po zvětšení -->
+				<img src="img/960/14.webp"
+  				srcset="
+    			img/260/4.webp 260w,
+    			img/320/4.webp 320w,  
+    			img/380/4.webp 380w,
+    			img/480/4.webp 480w,
+    			img/540/4.webp 540w"
+				sizes="
+				  (min-width: 1000px) calc((1000px - 2*8px) * 0.33), 
+				  (min-width: 782px) calc((100vw - 2*8px) * 0.33), 
+                  (min-width: 532px) calc((100vw - 2*8px) * 0.5), 
+                  calc(100vw - 2*8px)" alt="škodovka lol">
+				</div>
                 <figcaption>
-                  Škoda Forman ve Special linu
+                  Škoda Forman ve Special linu <!--just some text bellow the image-->
                 </figcaption>
               </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/1.webp">
-                  <source media="(max-width:960px)" srcset="img/960/1.webp">
-                  <img src="img/1920/1.webp" alt="Autíčko">
-                </picture>
+            <figure class="gallery-item"><!--figure used to group image and caption-->
+                <div class="obal"><!-- abychom ošetřli přetečení obrázku po zvětšení -->
+				<img src="img/960/1.webp"
+  				srcset="
+    			img/260/1.webp 260w,
+    			img/320/1.webp 320w,  
+    			img/380/1.webp 380w,
+    			img/480/1.webp 480w,
+    			img/540/1.webp 540w"
+				sizes="
+				  (min-width: 1000px) calc((1000px - 2*8px) * 0.33), 
+				  (min-width: 782px) calc((100vw - 2*8px) * 0.33), 
+                  (min-width: 532px) calc((100vw - 2*8px) * 0.5), 
+                  calc(100vw - 2*8px)" alt="škodovka lol">
+				</div>
                 <figcaption>
-                  Škoda Forman ve Special linu
+                  Škoda Forman ve Special linu <!--just some text bellow the image-->
                 </figcaption>
               </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/6.webp">
-                  <source media="(max-width:960px)" srcset="img/960/6.webp">
-                  <img src="img/1920/6.webp" alt="Autíčko">
-                </picture>
+            <figure class="gallery-item"><!--figure used to group image and caption-->
+                <div class="obal"><!-- abychom ošetřli přetečení obrázku po zvětšení -->
+				<img src="img/960/2.webp"
+  				srcset="
+    			img/260/2.webp 260w,
+    			img/320/2.webp 320w,  
+    			img/380/2.webp 380w,
+    			img/480/2.webp 480w,
+    			img/540/2.webp 540w"
+				sizes="
+				  (min-width: 1000px) calc((1000px - 2*8px) * 0.33), 
+				  (min-width: 782px) calc((100vw - 2*8px) * 0.33), 
+                  (min-width: 532px) calc((100vw - 2*8px) * 0.5), 
+                  calc(100vw - 2*8px)" alt="škodovka lol">
+				</div>
                 <figcaption>
-                  Škoda Forman ve Special linu
+                  Škoda Forman ve Special linu <!--just some text bellow the image-->
                 </figcaption>
               </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/7.webp">
-                  <source media="(max-width:960px)" srcset="img/960/7.webp">
-                  <img src="img/1920/7.webp" alt="Autíčko">
-                </picture>
+            <figure class="gallery-item"><!--figure used to group image and caption-->
+                <div class="obal"><!-- abychom ošetřli přetečení obrázku po zvětšení -->
+				<img src="img/960/3.webp"
+  				srcset="
+    			img/260/3.webp 260w,
+    			img/320/3.webp 320w,  
+    			img/380/3.webp 380w,
+    			img/480/3.webp 480w,
+    			img/540/3.webp 540w"
+				sizes="
+				  (min-width: 1000px) calc((1000px - 2*8px) * 0.33), 
+				  (min-width: 782px) calc((100vw - 2*8px) * 0.33), 
+                  (min-width: 532px) calc((100vw - 2*8px) * 0.5), 
+                  calc(100vw - 2*8px)" alt="škodovka lol">
+				</div>
                 <figcaption>
-                  Škoda Forman ve Special linu
+                  Škoda Forman ve Special linu <!--just some text bellow the image-->
                 </figcaption>
               </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/8.webp">
-                  <source media="(max-width:960px)" srcset="img/960/8.webp">
-                  <img src="img/1920/8.webp" alt="Autíčko">
-                </picture>
+            <figure class="gallery-item"><!--figure used to group image and caption-->
+                <div class="obal"><!-- abychom ošetřli přetečení obrázku po zvětšení -->
+				<img src="img/960/14.webp"
+  				srcset="
+    			img/260/4.webp 260w,
+    			img/320/4.webp 320w,  
+    			img/380/4.webp 380w,
+    			img/480/4.webp 480w,
+    			img/540/4.webp 540w"
+				sizes="
+				  (min-width: 1000px) calc((1000px - 2*8px) * 0.33), 
+				  (min-width: 782px) calc((100vw - 2*8px) * 0.33), 
+                  (min-width: 532px) calc((100vw - 2*8px) * 0.5), 
+                  calc(100vw - 2*8px)" alt="škodovka lol">
+				</div>
                 <figcaption>
-                  Škoda Forman ve Special linu
+                  Škoda Forman ve Special linu <!--just some text bellow the image-->
                 </figcaption>
               </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/1.webp">
-                  <source media="(max-width:960px)" srcset="img/960/1.webp">
-                  <img src="img/1920/1.webp" alt="Autíčko">
-                </picture>
+            <figure class="gallery-item"><!--figure used to group image and caption-->
+                <div class="obal"><!-- abychom ošetřli přetečení obrázku po zvětšení -->
+				<img src="img/960/1.webp"
+  				srcset="
+    			img/260/1.webp 260w,
+    			img/320/1.webp 320w,  
+    			img/380/1.webp 380w,
+    			img/480/1.webp 480w,
+    			img/540/1.webp 540w"
+				sizes="
+				  (min-width: 1000px) calc((1000px - 2*8px) * 0.33), 
+				  (min-width: 782px) calc((100vw - 2*8px) * 0.33), 
+                  (min-width: 532px) calc((100vw - 2*8px) * 0.5), 
+                  calc(100vw - 2*8px)" alt="škodovka lol">
+				</div>
                 <figcaption>
-                  Škoda Forman ve Special linu
+                  Škoda Forman ve Special linu <!--just some text bellow the image-->
                 </figcaption>
               </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/2.webp">
-                  <source media="(max-width:960px)" srcset="img/960/2.webp">
-                  <img src="img/1920/2.webp" alt="Autíčko">
-                </picture>
+            <figure class="gallery-item"><!--figure used to group image and caption-->
+                <div class="obal"><!-- abychom ošetřli přetečení obrázku po zvětšení -->
+				<img src="img/960/2.webp"
+  				srcset="
+    			img/260/2.webp 260w,
+    			img/320/2.webp 320w,  
+    			img/380/2.webp 380w,
+    			img/480/2.webp 480w,
+    			img/540/2.webp 540w"
+				sizes="
+				  (min-width: 1000px) calc((1000px - 2*8px) * 0.33), 
+				  (min-width: 782px) calc((100vw - 2*8px) * 0.33), 
+                  (min-width: 532px) calc((100vw - 2*8px) * 0.5), 
+                  calc(100vw - 2*8px)" alt="škodovka lol">
+				</div>
                 <figcaption>
-                  Škoda Forman ve Special linu
+                  Škoda Forman ve Special linu <!--just some text bellow the image-->
                 </figcaption>
               </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/3.webp">
-                  <source media="(max-width:960px)" srcset="img/960/3.webp">
-                  <img src="img/1920/3.webp" alt="Autíčko">
-                </picture>
+            <figure class="gallery-item"><!--figure used to group image and caption-->
+                <div class="obal"><!-- abychom ošetřli přetečení obrázku po zvětšení -->
+				<img src="img/960/3.webp"
+  				srcset="
+    			img/260/3.webp 260w,
+    			img/320/3.webp 320w,  
+    			img/380/3.webp 380w,
+    			img/480/3.webp 480w,
+    			img/540/3.webp 540w"
+				sizes="
+				  (min-width: 1000px) calc((1000px - 2*8px) * 0.33), 
+				  (min-width: 782px) calc((100vw - 2*8px) * 0.33), 
+                  (min-width: 532px) calc((100vw - 2*8px) * 0.5), 
+                  calc(100vw - 2*8px)" alt="škodovka lol">
+				</div>
                 <figcaption>
-                  Škoda Forman ve Special linu
+                  Škoda Forman ve Special linu <!--just some text bellow the image-->
                 </figcaption>
               </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/4.webp">
-                  <source media="(max-width:960px)" srcset="img/960/4.webp">
-                  <img src="img/1920/4.webp" alt="Autíčko">
-                </picture>
+            <figure class="gallery-item"><!--figure used to group image and caption-->
+                <div class="obal"><!-- abychom ošetřli přetečení obrázku po zvětšení -->
+				<img src="img/960/14.webp"
+  				srcset="
+    			img/260/4.webp 260w,
+    			img/320/4.webp 320w,  
+    			img/380/4.webp 380w,
+    			img/480/4.webp 480w,
+    			img/540/4.webp 540w"
+				sizes="
+				  (min-width: 1000px) calc((1000px - 2*8px) * 0.33), 
+				  (min-width: 782px) calc((100vw - 2*8px) * 0.33), 
+                  (min-width: 532px) calc((100vw - 2*8px) * 0.5), 
+                  calc(100vw - 2*8px)" alt="škodovka lol">
+				</div>
                 <figcaption>
-                  Škoda Forman ve Special linu
+                  Škoda Forman ve Special linu <!--just some text bellow the image-->
                 </figcaption>
               </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/1.webp">
-                  <source media="(max-width:960px)" srcset="img/960/1.webp">
-                  <img src="img/1920/1.webp" alt="Autíčko">
-                </picture>
-                <figcaption>
-                  Škoda Forman ve Special linu
-                </figcaption>
-              </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/6.webp">
-                  <source media="(max-width:960px)" srcset="img/960/6.webp">
-                  <img src="img/1920/6.webp" alt="Autíčko">
-                </picture>
-                <figcaption>
-                  Škoda Forman ve Special linu
-                </figcaption>
-              </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/7.webp">
-                  <source media="(max-width:960px)" srcset="img/960/7.webp">
-                  <img src="img/1920/7.webp" alt="Autíčko">
-                </picture>
-                <figcaption>
-                  Škoda Forman ve Special linu
-                </figcaption>
-              </figure>
-            <figure class="gallery-item">
-                <picture>
-                  <source media="(max-width:480px)" srcset="img/480/8.webp">
-                  <source media="(max-width:960px)" srcset="img/960/8.webp">
-                  <img src="img/1920/8.webp" alt="Autíčko">
-                </picture>
-                <figcaption>
-                  Škoda Forman ve Special linu
-                </figcaption>
-              </figure>
-            </div>
-        </div>
+            </article>
+        </main>
     </body>
 </html>

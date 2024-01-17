@@ -2,8 +2,27 @@
 ## index.html
 - stránka s jedním velkým ```<div>```, který se chová jako grid
 - v tomto ```<div>``` je několikrát zopakovaný prvek se samotným obrázkem k zobrazení
-- používáme tag ```<picture>```, aby bylo možné vybrat odpovídající velikost obrázku podle velikosti obrazovky. Díky tomuto koncový uživatel ušetří velký datový přenos při načítání většího množství obrázků
-- popsáno tady:
+- varianta s img srcset:
+```html=
+<figure class="gallery-item"><!--figure used to group image and caption-->
+  <div class="obal"> <!-- abychom ošetřli přetečení obrázku po zvětšení -->
+  <img src="img/960/1.webp" <!-- obrázek, který se načte, pokud prohlížeč nepodporuje srcset a sizes -->
+    srcset="
+      img/480/1.webp 480w, <!-- URL obrázku a jeho šířka (prohlížeč nezná šířku před načtením) -->
+      img/960/1.webp 960w,  
+      img/1920/1.webp 1920w"
+    sizes=" <!-- sizes je povinný tag -->
+      (min-width: 782px) calc((100vw - 2*8px) * 0.33), <!-- pro šířku < (2*gap+3*250px) - kvůli autofit v css - zobrazí se obrázek o šířce viewport/3-okraje -->
+      (min-width: 532px) calc((100vw - 2*8px) * 0.5), <!-- pro šířku < (2*gap+2*250px) - kvůli autofit v css - zobrazí se obrázek o šířce viewport/2-okraje -->
+      calc(100vw - 2*8px)" alt="škodovka lol"> <!-- else: zobrazí obrázek o šířce celý viewport-okraje -->
+  </div>
+  <figcaption>
+    Škoda Forman ve Special linu<!--just some text bellow the image-->
+  </figcaption>
+</figure>
+```
+
+- varianta s picture:
 ```html=
 <figure class="gallery-item"> <!--figure used to group image and caption-->
     <picture> <!--tag allowing us to specify multiple image size variants-->
