@@ -30,7 +30,7 @@ img{
 }
 
 .gallery-item img:hover { /* hover zoom-in transition */
-	transform: scale(1.5);
+	transform: scale(1.2);
 }
 
 figcaption{
