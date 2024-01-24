@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>gal</title>
+  <style>
+    main {
+      max-width: 1000px;
+      margin: auto;
+    }
+    img{
+      width: 100%;
+    }
+  
+  </style>
+</head>
+ 
+<body>
+<!--
+Deskriptor x (v řádku img/480/1.webp 1x) se používá pro určení DPR (Device Pixel Ratio), při kterém se vybere daný zdroj ze srcset. Pokud máme všechny řádky v srcset s tímto deskriptorem, nemusíme použít atribut sizes pro zadání pravidel výběru.
+Device Pixel Ratio nám značí, kolik fyzických pixelů na druhou tvoří jeden "softwarový" pixel. Tedy, pokud DPR=2, tak 1 softwarem vnímaný pixel je ve skutečnosti matice 2*2 pixelů.
+Tento příklad se využívá, abychom kvůli vyšším DPR neztratili pěkný vzhled obrázků, které by jinak působily nevzhledně, protože by jeho pixely působily velice a my bychom nevyužívali plný potenciál jemného displeje.
+-->
+<!--
+  <img src="img/960/1.webp"
+    srcset="
+    img/480/1.webp 1x,  
+    img/960/1.webp 2x" 
+  alt="škodovka lol">
+-->
+<main>
+<h1>Krása, nádhera</h1>
+<p>
+  Vytvoř obrázek, který má seznam zdrojů obrázků definovaný v srcset - tam je na každém řádku zaznačena URL adresa k obrázku a za ní následuje šířka toho zdrojového obrázku v pixelech (ale zapisuje se s deskriptorem w). Abychom věděli, kdy který zdroj použít, máme atribut sizes, ten obsahuje podmínku (jako bychom psali css media query) a příslušnou velikost obrázku z atributu srcset. 
+  </p>
+<p>
+V prvním případě:
+když je šířka viewportu &gt;= 782px, tak vyber ze srcset zdroj obrázku nejblíže k velikosti 960px - tedy v tomto případě to bude právě tato velikost obrázku (2. řádek srcset).
+  </p><p>
+V druhém případě:
+když je šířka viewportu &gt;= 382px a &lt; 782px, tak vyber ze srcset zdroj obrázku nejblíže k velikosti 480px - tedy v tomto případě to bude právě tato velikost obrázku (1. řádek srcset).
+  </p><p>
+Podmínky pro velikost viewportu musíme psát sestupně, aby se vybraly správně (vybere se první platná podmínka)
+</p><p>
+Ve třetím případě:
+když ani jedna z podmínek pro velikost viewportu výše uvedených neplatí, tak vyber zdroj ze srcset nejblíže šířce celého viewportu (značeno 100vw - tedy 100% z viewportu)
+</p>
+<figure>
+  <img src="img/960/1.webp"
+    srcset="
+    img/260/1.webp 260w,
+  img/480/1.webp 480w,
+    img/960/1.webp 960w" 
+  sizes="
+  (min-width: 782px) 960px,
+    (min-width: 500px) 480px,
+    100vw"
+   alt="škodovka lol">
+<figcaption>Toto je auto</figcaption>
+  </figure>
+<h2>Krása, nádhera</h2>
+<p>
+  Vytvoř obrázek, který má seznam zdrojů obrázků definovaný v srcset - tam je na každém řádku zaznačena URL adresa k obrázku a za ní následuje šířka toho zdrojového obrázku v pixelech (ale zapisuje se s deskriptorem w). Abychom věděli, kdy který zdroj použít, máme atribut sizes, ten obsahuje podmínku (jako bychom psali css media query) a příslušnou velikost obrázku z atributu srcset. 
+  </p>
+<p>
+V prvním případě:
+když je šířka viewportu &gt;= 782px, tak vyber ze srcset zdroj obrázku nejblíže k velikosti 960px - tedy v tomto případě to bude právě tato velikost obrázku (2. řádek srcset).
+  </p><p>
+V druhém případě:
+když je šířka viewportu &gt;= 382px a &lt; 782px, tak vyber ze srcset zdroj obrázku nejblíže k velikosti 480px - tedy v tomto případě to bude právě tato velikost obrázku (1. řádek srcset).
+  </p><p>
+Podmínky pro velikost viewportu musíme psát sestupně, aby se vybraly správně (vybere se první platná podmínka)
+</p><p>
+Ve třetím případě:
+když ani jedna z podmínek pro velikost viewportu výše uvedených neplatí, tak vyber zdroj ze srcset nejblíže šířce celého viewportu (značeno 100vw - tedy 100% z viewportu)
+</p>
+  <img src="img/960/1.webp"
+    srcset="
+    img/260/1.webp 260w,
+  img/480/1.webp 480w,
+    img/960/1.webp 960w" 
+  sizes="
+  (min-width: 782px) 960px,
+    (min-width: 500px) 480px,
+    100vw"
+   alt="škodovka lol">
+</main>
+</body>
+</html>

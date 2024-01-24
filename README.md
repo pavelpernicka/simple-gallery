@@ -7,6 +7,7 @@ Img vs Picture: [img_vs_picture.md](docs/img_vs_picture.md)
 
 Batch processing tools: [batch_processing.md](docs/batch_processing.md)
 
+Demonstration of img srcset and sizes in one page with extra detailed description (czech) [in_page.html](in_page.html)
 ## resize.sh
 bash script to automatically resize images into specified sizes
 - install imagemagick
