@@ -6,6 +6,7 @@
 - https://cloudconvert.com/webp-to-jpg
 ## Irfanview
 - https://www.irfanview.com/
+- na webp je potřeba naistalovat plugin
 ## Photoshop
 - ale není zdarma
 
